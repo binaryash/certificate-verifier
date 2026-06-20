@@ -1,14 +1,22 @@
+import "@nomicfoundation/hardhat-ethers";
 import hre from "hardhat";
+import { writeFileSync } from "fs";
 
 async function main() {
-  // Use the runtime environment (hre). The hardhat-ethers plugin registers hre.ethers.
-  const Factory = await hre.ethers.getContractFactory("CertificateVerifier");
+  const connection = await hre.network.connect();
+  const Factory = await connection.ethers.getContractFactory("CertificateVerifier");
 
   const contract = await Factory.deploy();
-
   await contract.waitForDeployment();
 
-  console.log("Deployed to:", await contract.getAddress());
+  const address = await contract.getAddress();
+  console.log("Deployed to:", address);
+
+  writeFileSync(
+    "deployed.json",
+    JSON.stringify({ address }, null, 2)
+  );
+  console.log("Address saved to deployed.json");
 }
 
 main().catch((err) => {

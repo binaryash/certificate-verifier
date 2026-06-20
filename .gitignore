@@ -26,3 +26,9 @@ coverage/
 
 # OS files
 .DS_Store
+
+# SQLite
+backend/certs.db
+
+# Deployed contract address (local only)
+deployed.json
