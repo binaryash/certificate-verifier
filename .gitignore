@@ -5,6 +5,22 @@ node_modules/
 dist/
 build/
 
+# Hardhat / Typechain
+artifacts/
+cache/
+typechain/
+
+# Coverage
+coverage/
+
+# Local envs
+.env.local
+.env.*.local
+
+# IDEs
+.vscode/
+.idea/
+
 # Environment files
 .env
 
