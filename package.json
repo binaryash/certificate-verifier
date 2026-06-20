@@ -1,0 +1,8 @@
+{
+  "name": "cert-verifier",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "test": "echo \"No tests defined\" && exit 0"
+  }
+}
