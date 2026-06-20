@@ -1,8 +1,8 @@
-import { ethers } from "hardhat";
+import hre from "hardhat";
 
 async function main() {
-  // Use the named `ethers` export which is registered by hardhat-ethers
-  const Factory = await ethers.getContractFactory("CertificateVerifier");
+  // Use the runtime environment (hre). The hardhat-ethers plugin registers hre.ethers.
+  const Factory = await hre.ethers.getContractFactory("CertificateVerifier");
 
   const contract = await Factory.deploy();
 
