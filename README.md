@@ -24,81 +24,11 @@ No central authority can silently alter or delete records.
 
 ## Screenshots
 
-> **Dashboard** — view all issued certificates
+**Dashboard** — view all issued certificates
 
-```
-┌─────────────────────────────────────────────────────┐
-│ ⛓ CertVerifier     Dashboard  Register  Verify      │
-├─────────────────────────────────────────────────────┤
-│ Certificates                      [ + Register New ] │
-│                                                      │
-│ ┌─────────────────────────────────────────────────┐ │
-│ │ Blockchain Workshop 2026    — Alice Smith  [Revoke]│
-│ │ Issuer: Tech Institute   File: cert.pdf          │ │
-│ │ Registered: 20 Jun 2026                          │ │
-│ │ Hash: 0x3f4a9c...                                │ │
-│ └─────────────────────────────────────────────────┘ │
-│ ┌─────────────────────────────────────────────────┐ │
-│ │ AI Fundamentals Course     — Bob Kumar    [Revoke]│
-│ │ Issuer: DataAcademy   Registered: 19 Jun 2026    │ │
-│ │ Hash: 0xb72d1e...                                │ │
-│ └─────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────┘
-```
+![Dashboard](docs/screenshots/app.png)
 
-> **Register** — issue a new certificate
-
-```
-┌─────────────────────────────────────────────────────┐
-│ Register Certificate                                 │
-│                                                      │
-│ Certificate Name *                                   │
-│ ┌──────────────────────────────────────────────────┐│
-│ │ Blockchain Workshop 2026                         ││
-│ └──────────────────────────────────────────────────┘│
-│ Student Name                                         │
-│ ┌──────────────────────────────────────────────────┐│
-│ │ Alice Smith                                      ││
-│ └──────────────────────────────────────────────────┘│
-│ Issuer Organization                                  │
-│ ┌──────────────────────────────────────────────────┐│
-│ │ Tech Institute                                   ││
-│ └──────────────────────────────────────────────────┘│
-│ Upload Certificate File (optional)                   │
-│ ┌──────────────────────────────────────────────────┐│
-│ │ certificate.pdf                                  ││
-│ └──────────────────────────────────────────────────┘│
-│                                                      │
-│ [ Register Certificate ]  [ Cancel ]                 │
-└─────────────────────────────────────────────────────┘
-```
-
-> **Verify** — check any certificate's authenticity
-
-```
-┌─────────────────────────────────────────────────────┐
-│ Verify Certificate                                   │
-│                                                      │
-│ Upload File ─────────────────────────────────────── │
-│ ┌──────────────────────────────┐  [ Verify ]        │
-│ │ certificate.pdf              │                     │
-│ └──────────────────────────────┘                     │
-│                                                      │
-│ Verify by Hash ──────────────────────────────────── │
-│ ┌──────────────────────────────┐  [ Verify ]        │
-│ │ 0x3f4a9c...                  │                     │
-│ └──────────────────────────────┘                     │
-│                                                      │
-│ ┌─────────────────────────────────────────────────┐ │
-│ │ Blockchain Workshop 2026              [ Valid ✓ ]│ │
-│ │ Student:  Alice Smith                            │ │
-│ │ Issuer:   Tech Institute                         │ │
-│ │ On-chain: 0xf39Fd6...                            │ │
-│ │ Issued:   20 Jun 2026, 14:32                     │ │
-│ │ Hash:     0x3f4a9c8d...                          │ │
-│ └─────────────────────────────────────────────────┘ │
-└─────────────────────────────────────────────────────┘
-```
+> Register and Verify pages shown after first certificate is issued.
 
 ---
 
